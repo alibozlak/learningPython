@@ -105,10 +105,11 @@ listeyi_isle([1, 2, 3], ikiyle_carp)
 #### 2. Birleştirilebilirlik (Composability)
 Farklı işler yapan küçük, basit "aletler" (fonksiyonlar) oluşturup bunları birleştirerek çok karmaşık bir üretim bandı (karmaşık bir mantık) kurabilirsiniz.
 
-Örneğin, "önce sayının karesini alan, sonra sonuca 1 ekleyen, sonra da ikiye bölen" bir işlem yapmak istediğinizde, bu adımların her birini ayrı bir fonksiyon olarak düşünüp birleştirebilirsiniz. Bu, devasa, her işi yapan tek bir makine (monolitik bir fonksiyon) yapmaktan çok daha mantıklıdır. Çünkü küçük parçaları test etmek, anlamak ve yeniden kullanmak daha kolaydır.
+Örneğin, "önce sayının karesini alan, sonra sonuca 1 ekleyen, sonra da ikiye bölen" bir işlem yapmak istediğinizde, bu adımların her birini ayrı bir fonksiyon olarak düşünüp birleştirebilirsiniz.
+#### **Bu, devasa, her işi yapan tek bir makine (monolitik bir fonksiyon) yapmaktan çok daha mantıklıdır. Çünkü küçük parçaları test etmek, anlamak ve yeniden kullanmak daha kolaydır.**
 
 #### 3. Davranışın Dinamik Olarak Belirlenmesi
-Programınızın çalışma anında (runtime) hangi "aletin" kullanılacağına karar vermesi gerekebilir. Örneğin, kullanıcı arayüzünden "Kareleri Hesapla" butonuna basıldığında `kare_al` fonksiyonunu, "Küpleri Hesapla" butonuna basıldığında `kup_al` fonksiyonunu aynı `listeyi_isle` fonksiyonuna gönderebilirsiniz.
+#### **Programınızın çalışma anında (runtime) hangi "aletin" kullanılacağına karar vermesi gerekebilir. Örneğin, kullanıcı arayüzünden "Kareleri Hesapla" butonuna basıldığında `kare_al` fonksiyonunu, "Küpleri Hesapla" butonuna basıldığında `kup_al` fonksiyonunu aynı `listeyi_isle` fonksiyonuna gönderebilirsiniz.**
 
 Eğer fonksiyon bir "veri" olmasaydı, bunu `if/else` bloklarıyla dolu karmaşık bir yapıyla çözmeniz gerekirdi:
 
